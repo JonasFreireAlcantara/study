@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorBlueTwitter">
+
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="20"
+                android:background="@color/colorBlueTwitter"
+                android:padding="7dp"
+                android:scaleType="fitStart"
+                app:srcCompat="@drawable/twitter_512" />
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@color/colorBlueTwitter"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/twitter_bell_512" />
+
+            <ImageButton
+                android:id="@+id/imageButton5"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@color/colorBlueTwitter"
+                android:padding="4dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/twitter_mail_512" />
+
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@color/colorBlueTwitter"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/twitter_follower_512" />
+
+            <ImageButton
+                android:id="@+id/imageButton6"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@color/colorBlueTwitter"
+                android:padding="11dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/twitter_magnifier_512" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@color/colorBlueTwitter"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/twitter_vertical_menu_96"
+                android:onClick="showPopup"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/colorWhite">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:tabIndicator="@color/colorBlueTwitter"
+                app:tabIndicatorHeight="5dp"
+                app:tabIndicatorColor="@color/colorLightBlueTwitter"
+                >
+            </android.support.design.widget.TabLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></android.support.v4.view.ViewPager>
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>

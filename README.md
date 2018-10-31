@@ -1,2 +1,2 @@
 # study
-This repository refers to the mine activities of university
+This repository refers to my own activities from university
