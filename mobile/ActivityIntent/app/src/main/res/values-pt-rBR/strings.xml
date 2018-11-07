@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Suporte de Laboratório</string>
+    <string name="name_text">Nome</string>
+    <string name="choose_button">Escolher Curso</string>
+    <string name="solicitation_text">Solicitação</string>
+    <string name="bcc_text">BCC - Bacharelado em Ciência da Computação</string>
+    <string name="bsi_text">BSI - Bacharelado em Sistema de Informação</string>
+    <string name="lc_text">LC - Licenciatura em Computação</string>
+    <string name="select_button">Selecionar</string>
+    <string name="study_checkbox">Estudo</string>
+</resources>
