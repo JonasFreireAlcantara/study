@@ -1,0 +1,44 @@
+ 
+# Questao 1
+
+FUNCIONARIO(cpf_func, data_nasc, lograd, cidade, cep, nome, salario, sexo)
+FUNCIONARIO: PK(cpf_func(NOT NULL, UNIQUE))
+FUNCIONARIO: FK(cod_func_dep(NOT NULL, UNIQUE), cpf_func(NULL))
+
+
+
+TRABALHA_EM(cpf_func, num_dep, cod_func_dep)
+TRABALHA_EM: PK(cod_func_dep(NOT NULL, UNIQUE))
+TRABALHA_EM: FK(cpf_func(NOT NULL, UNIQUE), num_dep(NOT NULL))
+
+
+
+GERENCIA(cpf_func, num_dep, data_inicio)
+GERENCIA: FK(cpf_func, num_dep)
+GERENCIA: PK(cpf_func(NULL), num_dep(NOT NULL))
+
+
+
+DEPARTAMENTO(num_dep, nome, num_func)
+DEPARTAMENTO: PK(num_dep(NOT NULL, UNIQUE))
+DEPARTAMENTO: FK(cod_func_dep(NOT NULL, UNIQUE))
+
+
+
+LOCALIZACAO(num_dep, localiz)
+LOCALIZACAO: FK(num_dep(NOT NULL))
+
+
+
+PROJETO(num_proj, num_dep, nome, localiz)
+PROJETO: PK(num_proj(NOT NULL, UNIQUE))
+PROJETO: FK(num_dep(NOT NULL), cod_func_proj(NOT NULL, UNIQUE))
+
+
+
+TRABALHA_PARA(cod_func_proj, horas, cpf_func, num_proj)
+TRABALHA_PARA: PK(cod_func_proj(NOT NULL, UNIQUE))
+TRABALHA_PARA: FK(cpf_func(NOT NULL), num_proj(NOT NULL))
+
+
+
