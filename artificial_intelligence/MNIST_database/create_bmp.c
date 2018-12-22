@@ -5,6 +5,9 @@
 #define HEIGHT 28
 #define WIDTH 28
 #define BITS_PER_PIXEL 8
+#define FILE_SIZE HEIGHT*WIDTH
+#define DIB_HEADER_SIZE 40
+#define COLORS_USED 256
 
 
 struct bmp_header {
@@ -39,10 +42,29 @@ int main() {
 	FILE* out_file = fopen('image.bmp', 'wb');
 	FILE* in_file = fopen('train-images-idx3-ubyte', 'rb');
 	
-	strcpy()
+	// Fill memory with zeros
+	memset(bmp_hdr, 0, sizeof(struct bmp_header));
+	memset(info_hdr, 0, sizeof(struct info_header));
 	
+	strcpy(bmp_hdr->signature, "BM");
+	bmp_hdr->file_size = FILE_SIZE
+	bmp_hdr->data_offset = sizeof(struct bmp_header) + sizeof(struct info_header);
 	
+	info_hdr->size = DIB_HEADER_SIZE;
+	info_hdr->width = WIDTH;
+	info_hdr->height = HEIGHT;
+	info_hdr->bits_per_pixel = BITS_PER_PIXEL;
+	info_hdr->colors_used = COLORS_USED;
 	
+	// TODO read pixel data from file
+	
+	// TODO setup pixel data
+		
+	// TODO write data to file
+	
+	// TODO close files
+	
+	// TODO free allocated memories
 	
 	return 0;
 }
