@@ -33,19 +33,24 @@ public class ListPersonFragment extends Fragment {
             listOfPersons.add(new Person("Silas", "Araújo", 20, "Male", "Not Married"));
             listOfPersons.add(new Person("Isaac", "Santos", 19, "Male", "Not Married"));
         }
-
-        recyclerView = getActivity().findViewById(R.id.recycler_view);
-        layoutManager = new LinearLayoutManager(getActivity());
-        adapter = new PersonToListAdapter(listOfPersons);
-
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(adapter);
     }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_layout_list, container, false);
+        View view = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_layout_list, container, false);
+
+        recyclerView = view.findViewById(R.id.recycler_view);
+        layoutManager = new LinearLayoutManager(getActivity());
+        adapter = new PersonToListAdapter(listOfPersons);
+
+        if(recyclerView == null)
+            System.out.println("getActivity() = " + getActivity() + " R.id.recycler_view " + R.id.recycler_view);
+
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(adapter);
+
+        return view;
     }
 
 
