@@ -38,7 +38,7 @@ public class ListPersonFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_layout_list, container, false);
+        View view = inflater.inflate(R.layout.fragment_layout_list, container, false);
 
         recyclerView = view.findViewById(R.id.recycler_view);
         layoutManager = new LinearLayoutManager(getActivity());
@@ -52,8 +52,6 @@ public class ListPersonFragment extends Fragment {
 
         return view;
     }
-
-
 
 
 }
