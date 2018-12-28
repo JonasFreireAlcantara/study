@@ -1,5 +1,11 @@
 # This script aim to simulates through vpython library the gravitational slingshot
-# Only for fun purposes
+# Only for study purposes
+# @author: Jonas Freire - jonasfreireperson@gmail.com
+
+"""
+Este código pode ser utilizado livremente com a garantia
+de que seja utilizado para fim pedagógicos, sem fins lucrativos ;)
+"""
 
 from vpython import *
 
@@ -47,14 +53,11 @@ class planet(sphere):
         acceleration = self.C * planet.mass / ((planet.pos - self.pos).mag**2)
         self.acceleration = (planet.pos - self.pos).norm() * acceleration
 
-
-mars = planet(pos=vector(-29, 0, 0), speed=vector(10.5, 0, 0), mass=50, radius=0.3, make_trail=True)
-satellite = planet(pos=vector(0, 9, 0), speed=vector(0, -3, 0), mass=1, radius=0.1, make_trail=True)
+mars = planet(pos=vector(-89, 0, 0), speed=vector(10, 0, 0), mass=50, radius=0.3, make_trail=True)
+satellite = planet(pos=vector(0, 28, 0), speed=vector(0, -3, 0), mass=1, radius=0.1, make_trail=True)
 
 delta_t = 0.01
 t = 0
-was_set = False
-limiar_speed = 0.05
 
 initial_distance = (mars.pos - satellite.pos).mag
 initial_speed = satellite.speed.mag
@@ -62,24 +65,22 @@ initial_speed = satellite.speed.mag
 while True:
     rate(1/delta_t)
 
-    old_speed = satellite.speed.mag
-
     # Update gravitational force and acceleration
     mars.updateAcceleration(satellite)
     satellite.updateAcceleration(mars)
     # Update position based at the acceleration
     mars.update(delta_t)
     satellite.update(delta_t)
-    # Update the arrow
-    mars.updateArrow(satellite.pos)
-    satellite.updateArrow(mars.pos)
+    # Update the arrow - Descomente isto para visualizar as setas que mostram o vetor força gravitacional
+    # mars.updateArrow(satellite.pos)
+    # satellite.updateArrow(mars.pos)
 
-    # print('satellite speed = ', satellite.speed.mag)
-
-    difference_speed = satellite.speed.mag - old_speed
-    if difference_speed > limiar_speed and was_set is not True :
-        delta_t = delta_t / 1000
-        was_set = True
+    # This is necessary to increase simulation precision
+    if t >= 9.25:     # Deactivate slow motion
+        delta_t = 0.0001
+    elif t >= 8.5:    # Activate slow motion
+        delta_t = 0.000001
+    t = t + delta_t
 
     if (mars.pos - satellite.pos).mag >= initial_distance:
         break
@@ -87,10 +88,25 @@ while True:
 final_speed = satellite.speed.mag
 final_distance = (mars.pos - satellite.pos).mag
 
-print('initial distance = ', initial_distance)
-print('final distance = ', final_distance)
+# print(40 * '=')
+#
+# print('initial distance = ', initial_distance)
+# print('final distance = ', final_distance)
+#
+# print(40 * '=')
+#
+# print('initial speed = ', initial_speed)
+# print('final speed = ', final_speed)
+
+# Portuguese
+print(40 * '=')
+
+print('Distância Inicial = ', initial_distance)
+print('Distância Final = ', final_distance)
 
 print(40 * '=')
 
-print('initial speed = ', initial_speed)
-print('final speed = ', final_speed)
+print('Velocidade Inicial = ', initial_speed)
+print('Velocidade Final = ', final_speed)
+
+print(40 * '=')
