@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+            android:id="@+id/coins_text_view_guide"
+            android:layout_margin="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="TYPE THE AMOUNT OF COINS"
+            android:textSize="16sp"
+            android:textColor="#000000"/>
+
+    <LinearLayout
+            android:id="@+id/coins_linear_layout_hundred_cents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/coins_text_view_guide">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:text="R$ 1"
+                android:layout_weight="3"/>
+
+        <EditText
+                android:id="@+id/coins_edit_text_hundred_cents"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:id="@+id/coins_linear_layout_fifty_cents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/coins_linear_layout_hundred_cents">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:text="R$ 0.50"
+                android:layout_weight="3"/>
+
+        <EditText
+                android:id="@+id/coins_edit_text_fifty_cents"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:id="@+id/coins_linear_layout_twenty_five_cents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/coins_linear_layout_fifty_cents">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:text="R$ 0.25"
+                android:layout_weight="3"/>
+
+        <EditText
+                android:id="@+id/coins_edit_text_twenty_five_cents"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:id="@+id/coins_linear_layout_ten_cents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/coins_linear_layout_twenty_five_cents">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:text="R$ 0.10"
+                android:layout_weight="3"/>
+
+        <EditText
+                android:id="@+id/coins_edit_text_ten_cents"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/coins_linear_layout_five_cents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/coins_linear_layout_ten_cents">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:text="R$ 0.05"
+                android:layout_weight="3"/>
+
+        <EditText
+                android:id="@+id/coins_edit_text_five_cents"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"/>
+
+    </LinearLayout>
+
+
+
+    <Button
+            app:layout_constraintRight_toRightOf="@id/coins_linear_layout_five_cents"
+            app:layout_constraintTop_toBottomOf="@id/coins_linear_layout_five_cents"
+            android:id="@+id/button_compute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:text="COMPUTE"
+            android:onClick="coinsComputeAction"/>
+
+
+
+</android.support.constraint.ConstraintLayout>

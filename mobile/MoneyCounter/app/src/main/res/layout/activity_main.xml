@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+            android:id="@+id/text_view_guide"
+            android:layout_margin="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="TYPE THE AMOUNT OF BANKNOTES"
+            android:textSize="16sp"
+            android:textColor="#000000"/>
+
+    <LinearLayout
+            android:id="@+id/linear_layout_hundred"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/text_view_guide">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:text="R$ 100"
+                android:layout_weight="3"/>
+
+        <EditText
+                android:id="@+id/edit_text_hundred"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:id="@+id/linear_layout_fifty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/linear_layout_hundred">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:text="R$ 50"
+                android:layout_weight="3"/>
+
+        <EditText
+                android:id="@+id/edit_text_fifty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:id="@+id/linear_layout_twenty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/linear_layout_fifty">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:text="R$ 20"
+                android:layout_weight="3"/>
+
+        <EditText
+                android:id="@+id/edit_text_twenty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:id="@+id/linear_layout_ten"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/linear_layout_twenty">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:text="R$ 10"
+                android:layout_weight="3"/>
+
+        <EditText
+                android:id="@+id/edit_text_ten"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/linear_layout_five"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/linear_layout_ten">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:text="R$ 5"
+                android:layout_weight="3"/>
+
+        <EditText
+                android:id="@+id/edit_text_five"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:id="@+id/linear_layout_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/linear_layout_five">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:text="R$ 2"
+                android:layout_weight="3"/>
+
+        <EditText
+                android:id="@+id/edit_text_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:id="@+id/linear_layout_result"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/linear_layout_two" app:layout_constraintVertical_bias="0.75">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginTop="16dp"
+                android:gravity="right">
+
+            <Button
+                    android:id="@+id/button_clean_coins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:text="CLEAN COINS"
+                    android:onClick="cleanCoinsAction"/>
+
+            <Button
+                    android:id="@+id/button_coins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:text="COINS"
+                    android:onClick="coinsAction"/>
+
+            <Button
+                    android:id="@+id/button_compute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:text="COMPUTE"
+                    android:onClick="computeAction"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+            <TextView
+                    android:id="@+id/text_view_result"
+                    android:layout_margin="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center|left"
+                    android:text="RESULT:"
+                    android:textColor="#000000"
+                    android:textSize="16sp"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
