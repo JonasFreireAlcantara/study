@@ -1,3 +1,27 @@
 <resources>
-    <string name="app_name">MoneyCounter</string>
+
+    <string name="app_name">Money Counter</string>
+
+    <!-- Info title for Main Activity -->
+    <string name="label_title_banknotes">TYPE THE AMOUNT OF BANK NOTES</string>
+
+    <!-- Buttons Main Activity -->
+    <string name="label_button_clean_coins">Clean Coins</string>
+    <string name="label_button_coins">Coins</string>
+    <string name="label_button_compute">Compute</string>
+
+    <!-- Results legend Main Activity -->
+    <string name="label_result_banknotes">Banknotes</string>
+    <string name="label_result_coins">Coins</string>
+    <string name="label_result_total">Total</string>
+
+    <!-- Toast Main Activity -->
+    <string name="toast_coins_cleared">Coins Cleared</string>
+
+    <!-- Info title for Coins Activity -->
+    <string name="coins_label_title_coins">TYPE THE AMOUNT OF COINS</string>
+
+    <!-- Buttons Coins Activity -->
+    <string name="coins_label_button_compute">Compute</string>
+
 </resources>

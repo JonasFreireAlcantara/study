@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Contador de Dinheiro</string>
+    <string name="label_title_banknotes">DIGITE A QUANTIDADE DE CÉDULAS</string>
+
+    <string name="label_button_clean_coins">Limpar Moedas</string>
+    <string name="label_button_coins">Moedas</string>
+    <string name="label_button_compute">Calcular</string>
+    <string name="coins_label_title_coins">DIGITE A QUANTIDADE DE MOEDAS</string>
+    <string name="coins_label_button_compute">Calcular</string>
+    <string name="toast_coins_cleared">Moedas Removidas</string>
+    <string name="label_result_banknotes">Cédulas</string>
+    <string name="label_result_coins">Moedas</string>
+    <string name="label_result_total">Total</string>
+</resources>

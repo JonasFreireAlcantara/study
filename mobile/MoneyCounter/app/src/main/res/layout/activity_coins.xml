@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <android.support.constraint.ConstraintLayout
-        android:orientation="vertical"
+        xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -14,9 +14,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="TYPE THE AMOUNT OF COINS"
+            android:text="@string/coins_label_title_coins"
             android:textSize="16sp"
-            android:textColor="#000000"/>
+            android:textColor="#000000" tools:layout_editor_absoluteX="16dp"/>
 
     <LinearLayout
             android:id="@+id/coins_linear_layout_hundred_cents"
@@ -38,7 +38,7 @@
                 android:id="@+id/coins_edit_text_hundred_cents"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
+                android:inputType="number"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_weight="1"/>
@@ -66,7 +66,7 @@
                 android:id="@+id/coins_edit_text_fifty_cents"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
+                android:inputType="number"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_weight="1"/>
@@ -94,7 +94,7 @@
                 android:id="@+id/coins_edit_text_twenty_five_cents"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
+                android:inputType="number"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_weight="1"/>
@@ -122,7 +122,7 @@
                 android:id="@+id/coins_edit_text_ten_cents"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
+                android:inputType="number"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_weight="1"/>
@@ -149,13 +149,12 @@
                 android:id="@+id/coins_edit_text_five_cents"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
+                android:inputType="number"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_weight="1"/>
 
     </LinearLayout>
-
 
 
     <Button
@@ -166,7 +165,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="16dp"
             android:layout_marginTop="16dp"
-            android:text="COMPUTE"
+            android:text="@string/coins_label_button_compute"
             android:onClick="coinsComputeAction"/>
 
 

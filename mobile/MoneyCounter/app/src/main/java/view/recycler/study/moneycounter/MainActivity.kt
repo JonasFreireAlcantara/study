@@ -15,6 +15,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        this.setResultBanknotes(this.bankNotesResult)
+        this.setResultCoins(this.coinsResult)
+        this.setResultTotal(this.coinsResult + this.bankNotesResult)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -23,13 +27,17 @@ class MainActivity : AppCompatActivity() {
         if(requestCode == Constant.REQUEST_COINS_CODE && resultCode == Constant.RESULT_COINS_CODE && data != null)
             this.coinsResult = data!!.getDoubleExtra(Constant.COINS_VALUE, 0.0)
 
-        setResult(this.coinsResult + this.bankNotesResult)
+        this.setResultCoins(this.coinsResult)
+        this.setResultTotal(this.coinsResult + this.bankNotesResult)
     }
 
 
     fun cleanCoinsAction(view: View) {
-        setResult(this.bankNotesResult)
-        Toast.makeText(this, "Result Cleared", Toast.LENGTH_SHORT).show()
+        this.coinsResult = 0.0
+
+        this.setResultCoins(this.coinsResult)
+        this.setResultTotal(this.bankNotesResult)
+        Toast.makeText(this, getString(R.string.toast_coins_cleared), Toast.LENGTH_SHORT).show()
     }
 
     fun coinsAction(view: View) {
@@ -76,16 +84,20 @@ class MainActivity : AppCompatActivity() {
         }
 
         this.bankNotesResult = hundred * 100 + fifty * 50 + twenty * 20 + ten * 10 + five * 5 + two * 2
-        this.setResult( hundred * 100 +
-                        fifty * 50 +
-                        twenty * 20 +
-                        ten * 10 +
-                        five * 5 +
-                        two * 2 +
-                        this.coinsResult )
+        this.setResultBanknotes(this.bankNotesResult)
+        this.setResultTotal(this.bankNotesResult + this.coinsResult)
     }
 
-    private fun setResult(result: Double) {
-        text_view_result.text = "R$ " + result
+
+    private fun setResultBanknotes(result: Double) {
+        text_view_result_banknotes.text = "R$ %.2f".format(result)
+    }
+
+    private fun setResultCoins(result: Double) {
+        text_view_result_coins.text = "R$ %.2f".format(result)
+    }
+
+    private fun setResultTotal(result: Double) {
+        text_view_result_total.text = "R$ %.2f".format(result)
     }
 }
