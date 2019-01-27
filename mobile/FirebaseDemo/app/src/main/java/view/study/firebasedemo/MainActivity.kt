@@ -17,16 +17,40 @@ class MainActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
-        auth.createUserWithEmailAndPassword(edit_text_user.text.toString(), edit_text_password.text.toString())
-            .addOnCompleteListener(this) { task ->
+        Log.d("Problem", "Here")
 
-                if(task.isSuccessful) {
-                    Log.d("STUDY", "createUserWithEmail:sucess")
-                    Toast.makeText(this, "Sucessfull Sign Up", Toast.LENGTH_SHORT).show()
-                } else {
-                    Log.w("Study", "createUserWithEmail:failure")
-                    Toast.makeText(this, "Failure to Sign Up", Toast.LENGTH_SHORT).show()
+        button_sign_up.setOnClickListener {
+
+            auth.createUserWithEmailAndPassword(edit_text_user.text.toString(), edit_text_password.text.toString())
+                .addOnCompleteListener(this) { task ->
+
+                    if(task.isSuccessful) {
+                        Log.d("STUDY", "createUserWithEmail:sucess")
+                        Toast.makeText(this, "Sucessfull Sign Up", Toast.LENGTH_SHORT).show()
+                    } else {
+                        Log.w("Study", "createUserWithEmail:failure")
+                        Toast.makeText(this, "Failure to Sign Up", Toast.LENGTH_SHORT).show()
+                    }
                 }
-            }
+        }
+
+
+
+
+        button_sign_in.setOnClickListener {
+
+            auth.signInWithEmailAndPassword(edit_text_user.text.toString(), edit_text_password.text.toString())
+                .addOnCompleteListener(this) { task ->
+
+                    if(task.isSuccessful) {
+                        Log.d("STUDY", "Login:sucessfull")
+                        Toast.makeText(this, "Login Sucessfull", Toast.LENGTH_SHORT).show()
+                    }
+
+                }
+
+        }
+
+
     }
 }
