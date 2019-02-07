@@ -2,10 +2,11 @@ from rest_framework import serializers
 from telephone_book.models import TelephoneBook
 
 
-class TelephoneBookSerializer(serializers.Serializer):
-    name = serializers.CharField(max_length=200)
-    fone_number = serializers.CharField(max_length=30)
-    e_mail = serializers.CharField(max_length=100)
+class TelephoneBookSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = TelephoneBook
+        fields = ('id', 'name', 'fone_number', 'e_mail')
 
     def create(self, validated_data):
         return TelephoneBook.objects.create(**validated_data)
