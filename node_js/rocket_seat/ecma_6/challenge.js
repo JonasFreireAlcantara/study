@@ -1,6 +1,6 @@
 const printLine = () => console.log("----------------------");
 
-
+/*
 // 1
 class Usuario {
     constructor(email, senha) {
@@ -58,3 +58,65 @@ const empregadosTwice = usuarios.map( usuarios => {
 });
 console.log(empregadosTwice.filter( usuarios => usuarios.idade < 50 ));
 
+
+
+// 3
+printLine();
+// 3.1
+const arr = [1, 2, 3, 4, 5];
+console.log(arr.map( item => item + 10 ));
+
+//3.2
+const usuario = { nome: 'Diego', idade: 23 };
+
+const mostraIdade = (usuario) => usuario.idade;
+console.log(mostraIdade(usuario));
+
+// 3.3
+const nome = "Diego";
+const idade = 23;
+
+const mostraUsuario = (nome = 'Diego', idade = 18) => ({nome, idade});
+
+console.log(mostraUsuario(nome, idade));
+console.log(mostraUsuario(nome));
+
+
+
+// 4
+printLine();
+// 4.1
+const empresa = {
+    nome: 'Rocketseat',
+    endereco: {
+    cidade: 'Rio do Sul',
+    estado: 'SC',
+    }
+};
+
+const {nome, endereco: {cidade, estado}} = empresa;
+
+console.log(nome); // Rocketseat
+console.log(cidade); // Rio do Sul
+console.log(estado); // SC
+
+
+//4.2
+function mostraInfo(usuario) {
+    let {nome, idade} = usuario;
+    return `${nome} tem ${idade} anos.`;
+}
+
+console.log(mostraInfo({ nome: 'Diego', idade: 23 }));
+*/
+
+
+// 5
+printLine();
+// 5.1
+const myArray = [1, 2, 3, 4, 5, 6];
+
+const [ x, ...y ] = myArray;
+
+console.log(x); // 1
+console.log(y); // [2, 3, 4, 5, 6]
