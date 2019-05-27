@@ -8,4 +8,10 @@ header#main-header {
     justify-content: center;
     align-items: center;
     box-shadow: 5px, 5px, #000000;
+    transition: all 0.5s;
+}
+
+header#main-header:hover {
+    background: #ffffff;
+    color: #700070;
 }
