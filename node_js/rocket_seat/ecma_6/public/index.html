@@ -3,13 +3,39 @@
 <head>
     <meta charset="UTF-8">
     
-    <title>ECMA Script 6</title>
+    <title>Aplicação</title>
+
+    <style>
+        ul {
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+        }
+
+        li {
+            padding: 10px;
+        }
+
+        img {
+            width: 80px;
+            float: left;
+            margin-right: 10px;
+        }
+    
+    </style>
 </head>
 <body>
-    <input id="texto" type="text" />
-    <button id="botao">Pegar</button>
-    <br/>
-    <div id="areatexto"></div>
+    <form id="repo-form">
+        <input type="text" name="repositorio" />
+        <button type="submit" >Adicionar</button>
+    </form>
+
+    <ul id="repo-list">
+    </ul>
+
+
+
     <script src="bundle.js"></script>
 </body>
 </html>
