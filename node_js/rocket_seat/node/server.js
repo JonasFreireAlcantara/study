@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 
 // Initializing app
 const app = express();
+app.use(express.json());
 
 // MongoDB connection with mongoose
 mongoose.connect('mongodb://localhost:27017/nodeapi', {
