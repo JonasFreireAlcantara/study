@@ -10,6 +10,7 @@ mongoose.connect('mongodb://localhost:27017/nodeapi', {
   useNewUrlParser: true
 });
 require('./src/models/Product');
+require('./src/models/Person');
 
 // Routes
 app.use('/api', require('./src/routes'));
