@@ -22,7 +22,17 @@
         </style>
     </head>
     <body>
-        <div id="fireCanvas"></div>
+        <div id="container">
+            <div id="fireCanvas"></div>
+            <div id="controlButtons">
+                <button onclick="setFireSource(0)">Extinguish</button>
+                <button onclick="decreaseFireSource()">-</button>
+                <button onclick="increaseFireSource()">+</button>
+                <button onclick="setFireSource(36)">Inflame</button>
+            </div>
+
+        </div>
+
         <script src="fire.js"></script>
     </body>
 </html>
