@@ -1,0 +1,10 @@
+
+Utilizing the GnuPG tool
+
+# to encrypt the file type the follow command:
+
+gpg -c filename
+
+# to decrypt
+
+gpg -d filename_to_decrypt -o output_filename
