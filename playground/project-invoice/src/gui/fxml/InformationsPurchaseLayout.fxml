@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.InformationsPurchaseController">
+   <children>
+      <Label layoutX="153.0" layoutY="33.0" text="Informações Compras">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="backButton" layoutX="14.0" layoutY="360.0" mnemonicParsing="false" onAction="#backButtonAction" text="Voltar" />
+      <Label layoutX="25.0" layoutY="87.0" text="Devedor:" />
+      <TextField fx:id="nameDebtorTextField" layoutX="93.0" layoutY="82.0" promptText="Nome do devedor" />
+      <TableView fx:id="purchaseTableView" layoutX="347.0" layoutY="82.0" prefHeight="303.0" prefWidth="236.0">
+        <columns>
+          <TableColumn fx:id="namePurchaseTableColumn" prefWidth="75.0" text="Compras" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Button fx:id="searchButton" layoutX="182.0" layoutY="115.0" mnemonicParsing="false" onAction="#searchButtonAction" text="Pesquisar" />
+      <GridPane layoutX="25.0" layoutY="162.0" prefHeight="192.0" prefWidth="307.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="148.0" minWidth="10.0" prefWidth="121.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="186.0" minWidth="10.0" prefWidth="186.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Nome:" />
+            <Label text="Preço por parcela:" GridPane.rowIndex="1" />
+            <Label text="Total de parcelas:" GridPane.rowIndex="2" />
+            <Label text="Parcela atual:" GridPane.rowIndex="3" />
+            <Label text="Data da compra:" GridPane.rowIndex="4" />
+            <Label text="Preço total:" GridPane.rowIndex="5" />
+            <Label fx:id="nameLabel" GridPane.columnIndex="1" />
+            <Label fx:id="pricePerMonthLabel" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="installmentsAmountLabel" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="actualInstallmentLabel" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="dateLabel" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label fx:id="totalPriceLabel" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+   </children>
+</Pane>
